@@ -1,10 +1,13 @@
-var _ = require('underscore'),
-  names = ['Bruce Wayne', 'Wally West', 'John Jones', 'Kyle Rayner', 'Arthur Curry', 'Clark Kent'],
-  otherNames = ['Barry Allen', 'Hal Jordan', 'Kara Kent', 'Diana Prince', 'Ray Palmer', 'Oliver Queen'];
+var _ = require('underscore');
+var names = require('./names.js');
+var $ = require('jquery');
 
-_.each([names, otherNames], function(nameGroup) {
-  findSuperman(nameGroup);
+$(function() {
+	$('#foo').text('Jquery work');	
 });
+
+
+findSuperman(names());
 
 function findSuperman(values) {
   _.find(values, function(name) {

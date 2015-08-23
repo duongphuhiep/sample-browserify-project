@@ -7,7 +7,7 @@ gulp.task('bundle', function() {
     gulp.src('app/main.js')
         .pipe(browserify({
           //insertGlobals : true,
-          debug : !gulp.env.production
+          debug : true
         }))
         .pipe(gulp.dest('build'))
 });
