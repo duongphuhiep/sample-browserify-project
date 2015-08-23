@@ -1,0 +1,30 @@
+{
+  "name": "sample-browserify-project",
+  "version": "1.0.0",
+  "description": "Browserify Project Sample",
+  "main": "index.html",
+  "homepage": "https://github.com/duongphuhiep/sample-browserify-project",
+  "authors": [
+    "hiep <duongphuhiep@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "browserify",
+    "i18next",
+    "riotjs",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "i18next": "~1.10.2"
+  }
+}
