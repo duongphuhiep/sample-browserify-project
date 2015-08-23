@@ -1,13 +1,29 @@
-# Browserify project sample
+# Browserify project sample with test
 
-This project sample shows how to use [browserify](http://browserify.org/)/[gulp](http://gulpjs.com/) to combine all the javascript modules in order to use them in `index.html`
+This sample shows a basic front-end [`browserify`](http://browserify.org/) project skeleton:
+
+- `index.html` is the entry point
+- `/app` contains all applicatif javascripts modules in the `commonjs` format (with `module.exports`, `require`)
+- Applicatif module can `require` each other or `require` node modules
+- [`browserify`](http://browserify.org/)/[gulp](http://gulpjs.com/) will wire up together all local modules (applicatif modules + node modules), so no need of module loader (such as `systemjs` or `stealjs`)
+- A module can `require` other external libraries via [browserify-shim](https://github.com/thlorenz/browserify-shim). In most case, external libraries are coming from CDN, so they are declared in `index.html` and won't be bundled by 
+`browserify`
+- An end to end test with [`nightwatch`](http://nightwatchjs.org/)
+
+##Execution
 
     npm install
     bowser install
     gulp
-    npm start
+    npm start       #run the live-server it will open the browser
+    nightwatch      #run end to end test require 'npm install nightwatch -g'
 
-##About this last commit 
+If you need a more basic example: with just [`browserify`](http://browserify.org/), checkout the "initial commit" or the "second commit"
+- The 'Initial commit' show how to organize your applicatif code into modules, make use a node module, and use browserify to bundle everything to the frontend (`index.html`)
+- The second commit add jquery from CDN into the project but not include it into the applicatif bundle.
+
+##The second commit
+
 * `app/main.js` uses 
   * 1 internal module `app/names.js`
   * 1 node module `underscore`

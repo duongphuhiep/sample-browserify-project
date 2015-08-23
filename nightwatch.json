@@ -1,0 +1,27 @@
+{
+  "output_folder": "reports",
+  "selenium": {
+    "host": "127.0.0.1",
+    "log_path": "reports",
+    "port": 4444,
+    "server_path": "bin/selenium-server-standalone-2.47.1.jar",
+    "start_process": true,
+    "start_session": true
+  },
+  "src_folders": [
+    "tests/e2e"
+  ],
+  "test_settings": {
+    "default": {
+      "desiredCapabilities": {
+        "acceptSslCerts": true,
+        "browserName": "firefox",
+        "javascriptEnabled": true
+      },
+      
+      "selenium_host": "localhost",
+      "selenium_port": 4444,
+      "silent": true
+    }
+  }
+}
