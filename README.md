@@ -9,6 +9,7 @@ This sample shows a basic front-end [`browserify`](http://browserify.org/) proje
 - A module can `require` other external libraries via [browserify-shim](https://github.com/thlorenz/browserify-shim). In most case, external libraries are coming from CDN, so they are declared in `index.html` and won't be bundled by 
 `browserify`
 - An end to end test with [`nightwatch`](http://nightwatchjs.org/)
+- [TODO] A unit test with jasmine on browser only (no javascript on backend)
 
 ##Execution
 
@@ -52,3 +53,6 @@ Check out for a really basic sample. The initial commit uses the code in [this e
 * `app/main.js` uses the `underscore` node module
 * run `gulp` to execute the `browserify` command which combine these two to `build/main.js`
 * then `index.html`  uses `build/main.js`
+
+##Personal opinion
+The nodejs eco-system is a must for developping front-end web application. But I'd rather avoid javascript programing whenever possible. So there is no backend nodejs javascript in all of my tutorials.
