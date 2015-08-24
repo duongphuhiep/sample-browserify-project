@@ -18,3 +18,5 @@ function findSuperman(values) {
     }
   });
 }
+
+var chessboard = require('./Chessboard');
